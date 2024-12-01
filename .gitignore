@@ -1,9 +1,4 @@
 # Ignore environments variables
 .env
 # Ignore Python virtual environments
-myVENV/
-# other myVENV
 elecVENV/
-myVENV/Lib/site-packages/torch/lib/dnnl.lib (606.15 MB)
-myVENV/Lib/site-packages/torch/lib/torch_cpu.dll (124.86 MB)
-myVENV/Lib/site-packages/xgboost/lib/xgboost.dll (169.00 MB)
