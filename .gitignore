@@ -1,6 +1,4 @@
 # Ignore environments variables
 .env
 # Ignore Python virtual environments
-myVENV/
-# other myVENV
 elecVENV/
