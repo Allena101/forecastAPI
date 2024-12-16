@@ -5,14 +5,18 @@ import os
 
 load_dotenv()
 
-DB_USER_PSQL = os.getenv("DB_USER_PSQL")
-DB_PASSWORD_PSQL = os.getenv("DB_PASSWORD_PSQL")
-DB_HOST_PSQL = os.getenv("DB_HOST_PSQL")
-DB_PORT_PSQL = os.getenv("DB_PORT_PSQL")
-DB_NAME_PSQL = os.getenv("DB_NAME_PSQL")
+## Old local method
+# DB_USER_PSQL = os.getenv("DB_USER_PSQL")
+# DB_PASSWORD_PSQL = os.getenv("DB_PASSWORD_PSQL")
+# DB_HOST_PSQL = os.getenv("DB_HOST_PSQL")
+# DB_PORT_PSQL = os.getenv("DB_PORT_PSQL")
+# DB_NAME_PSQL = os.getenv("DB_NAME_PSQL")
+# URL_DATABASE = f"postgresql://{DB_USER_PSQL}:{DB_PASSWORD_PSQL}@{DB_HOST_PSQL}:{DB_PORT_PSQL}/{DB_NAME_PSQL}"
+# engine = create_engine(URL_DATABASE)
 
-URL_DATABASE = f"postgresql://{DB_USER_PSQL}:{DB_PASSWORD_PSQL}@{DB_HOST_PSQL}:{DB_PORT_PSQL}/{DB_NAME_PSQL}"
-engine = create_engine(URL_DATABASE)
+# From Render venv file
+URL_PSQL = os.getenv("URL_PSQL")
+engine = create_engine(URL_PSQL)
 
 
 def get_session():
