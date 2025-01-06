@@ -871,8 +871,12 @@ async def trained_model(
     from darts.models import TCNModel
     from datetime import datetime, timedelta
 
-    # ? relative path
-    model_path = r"DARTS\saved_models\TCNModel_2024-10-17_10_21_45.pt"
+    # ? relative path (only works on windows)
+    # model_path = r"DARTS\saved_models\TCNModel_2024-10-17_10_21_45.pt"
+
+    import os
+    model_path = os.path.join("DARTS", "saved_models", "TCNModel_2024-10-17_10_21_45.pt")
+
 
     # ? # ultimate path
     # model_path = r"C:\Users\Magnus\Desktop\prognosVENV\DARTS\saved_models\TCNModel_2024-10-17_10_21_45.pt"
